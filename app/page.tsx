@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen mx-auto">
       <section
-        className="flex flex-col px-4 sm:px-8 md:px-[18%]  relative"
+        className="flex flex-col px-4 sm:px-8 md:px-[6%] py-6 sm:py-10 relative"
         style={{
           backgroundImage: 'url("/default-section-1.svg")',
           backgroundRepeat: "no-repeat",
