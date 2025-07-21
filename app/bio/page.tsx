@@ -347,10 +347,12 @@ export default function BiografiaDra() {
                 <BookOpen className="w-16 h-16 mx-auto mb-6 opacity-80" />
                 <h2 className="text-3xl font-bold mb-6">Filosofia de Trabalho</h2>
                 <blockquote className="text-xl italic leading-relaxed max-w-4xl mx-auto">
-                  "Acredito que cada paciente é único e merece um tratamento personalizado que considere não apenas os
-                  sintomas, mas toda a complexidade do ser humano. A medicina integrativa me permite oferecer o melhor
-                  de ambos os mundos: a precisão da medicina tradicional aliada à sabedoria das terapias
-                  complementares."
+                  <q>
+                    Acredito que cada paciente é único e merece um tratamento personalizado que considere não apenas os
+                    sintomas, mas toda a complexidade do ser humano. A medicina integrativa me permite oferecer o melhor
+                    de ambos os mundos: a precisão da medicina tradicional aliada à sabedoria das terapias
+                    complementares.
+                  </q>
                 </blockquote>
                 <div className="mt-6 text-lg opacity-90">— Dra. Maria Alice</div>
               </CardContent>

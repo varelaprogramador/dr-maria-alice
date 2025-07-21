@@ -1,6 +1,5 @@
 import { HeaderCustom } from "@/components/header-custom"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
 
 export default function PerfilNutrigenetico() {
     return (

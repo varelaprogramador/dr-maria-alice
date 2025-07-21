@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -21,13 +20,6 @@ const contactSchema = z.object({
 });
 
 type ContactFormValues = z.infer<typeof contactSchema>;
-
-const sources = [
-    { label: "Google", value: "google" },
-    { label: "Instagram", value: "instagram" },
-    { label: "Facebook", value: "facebook" },
-    { label: "Indicação", value: "indicacao" },
-];
 
 const Contact = () => {
     const form = useForm<ContactFormValues>({
