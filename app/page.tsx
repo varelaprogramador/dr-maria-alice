@@ -16,7 +16,7 @@ export default function Home() {
         }}
       >
         <div className="absolute inset-0 bg-[#1a8ca811] pointer-events-none" />
-        <div className="relative z-10">
+        <div className="relative z-10 w-full max-w-7xl mx-auto">
           <HeaderCustom />
           <div className="flex flex-col lg:flex-row gap-10 py-10">
             <div className="flex flex-col w-full  text-gray-700">
@@ -56,7 +56,8 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-        <div className="flex flex-col lg:flex-row gap-10 py-10 items-start">
+        <div className="w-full max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-10 py-10 items-start">
           <div className="w-full flex justify-center mb-8 lg:mb-0">
             <Image src={"/clinica.jpg"} alt="Foto da clínica" height={840} width={622} className="rounded-xl w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-full h-auto object-cover" />
           </div>
@@ -81,7 +82,8 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col items-center py-10 sm:py-16">
+        </div>
+        <div className="flex flex-col items-center py-10 sm:py-16 w-full max-w-7xl mx-auto">
           <span className="text-[#222B45] text-2xl sm:text-3xl font-bold mb-1 text-center">
             Tratamentos
           </span>
@@ -135,32 +137,34 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full bg-[#86D6FB] py-10 md:px-[18%] flex flex-col items-center justify-center px-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-4">
-          AGENDAR UMA CONSULTA
-        </h2>
-        <p className="text-white text-xs sm:text-sm md:text-base text-center max-w-2xl mb-8">
-          Agende sua consulta e tenha acesso a um atendimento de qualidade, personalizado e dedicado ao seu bem estar. Não perca tempo, reserve seu horário agora mesmo e invista na sua qualidade de vida!
-        </p>
-        <a
-          href="https://wa.me/SEU_NUMERO_WHATSAPP"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center bg-[#1877F2] hover:bg-[#145db2] text-white font-semibold text-xs md:text-sm px-6 sm:px-8 py-3 rounded-lg transition-colors duration-200 w-full max-w-xs sm:max-w-fit"
-        >
-          <svg
-            className="w-5 h-5 mr-2"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
+        <div className="w-full max-w-4xl mx-auto flex flex-col items-center justify-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-4">
+            AGENDAR UMA CONSULTA
+          </h2>
+          <p className="text-white text-xs sm:text-sm md:text-base text-center max-w-2xl mb-8">
+            Agende sua consulta e tenha acesso a um atendimento de qualidade, personalizado e dedicado ao seu bem estar. Não perca tempo, reserve seu horário agora mesmo e invista na sua qualidade de vida!
+          </p>
+          <a
+            href="https://wa.me/SEU_NUMERO_WHATSAPP"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center bg-[#1877F2] hover:bg-[#145db2] text-white font-semibold text-xs md:text-sm px-6 sm:px-8 py-3 rounded-lg transition-colors duration-200 w-full max-w-xs sm:max-w-fit"
           >
-            <path
-              d="M20.52 3.48A11.87 11.87 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 6.01L0 24l6.18-1.62A11.93 11.93 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22c-1.77 0-3.5-.46-5.01-1.33l-.36-.21-3.67.96.98-3.58-.23-.37A9.94 9.94 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.41-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.97.95-.97 2.3 0 1.35.99 2.66 1.13 2.85.14.18 1.95 2.98 4.74 4.06.66.28 1.18.45 1.58.58.66.21 1.26.18 1.73.11.53-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"
-              fill="currentColor"
-            />
-          </svg>
-          ATENDIMENTO VIA WHATSAPP
-        </a>
+            <svg
+              className="w-5 h-5 mr-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.52 3.48A11.87 11.87 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 6.01L0 24l6.18-1.62A11.93 11.93 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22c-1.77 0-3.5-.46-5.01-1.33l-.36-.21-3.67.96.98-3.58-.23-.37A9.94 9.94 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.41-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.97.95-.97 2.3 0 1.35.99 2.66 1.13 2.85.14.18 1.95 2.98 4.74 4.06.66.28 1.18.45 1.58.58.66.21 1.26.18 1.73.11.53-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"
+                fill="currentColor"
+              />
+            </svg>
+            ATENDIMENTO VIA WHATSAPP
+          </a>
+        </div>
       </section>
     </div>
   )
