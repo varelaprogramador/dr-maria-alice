@@ -6,18 +6,18 @@ export default function Alzheimer() {
     return (
         <div className="min-h-screen bg-[#eaf6fd]">
             <HeaderCustom />
-            <section className="flex flex-col md:flex-row gap-10 px-4 md:px-[12%] py-12 items-center">
+            <section className="flex flex-col md:flex-row gap-8 md:gap-10 px-4 md:px-[12%] py-8 md:py-12 items-center">
                 <div className="w-full md:w-[45%] flex flex-col items-start">
                     <Image
                         src="/alzheimer.png"
                         alt="Alzheimer"
                         width={200}
                         height={200}
-                        className="rounded-xl object-cover w-full max-w-xs md:max-w-md"
+                        className="rounded-xl object-cover w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-full h-auto"
                         priority
                     />
                 </div>
-                <div className="w-full md:w-[55%] flex flex-col">
+                <div className="w-full md:w-[55%] flex flex-col mt-8 md:mt-0">
                     <h1 className="text-2xl md:text-3xl font-bold text-[#222B45] mb-4">Alzheimer</h1>
                     <p className="text-base text-[#222B45] mb-6 leading-relaxed">
                         A Doença de Alzheimer é uma doença neurodegenerativa e é a causa mais comum de demência em pessoas idosas, representando 50-80% dos casos. Apresenta manifestação clínica lenta, porém progressiva, com perda de função cognitiva como memória, raciocínio lógico, linguagem, atenção e habilidade visual e espacial.

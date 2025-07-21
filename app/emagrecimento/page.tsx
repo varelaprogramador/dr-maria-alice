@@ -6,14 +6,14 @@ export default function Emagrecimento() {
   return (
     <div className="min-h-screen bg-[#eaf6fd]">
       <HeaderCustom />
-      <section className="container mx-auto px-54 py-16 flex flex-col md:flex-row items-center gap-12">
+      <section className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-54 py-8 md:py-16 flex flex-col md:flex-row items-center gap-8 md:gap-12">
         <div className="flex flex-col items-center gap-8 w-full md:w-1/2">
           <Image
             src="/pagina-emagrecimento-image.png"
             alt="Emagrecimento"
             width={250}
             height={250}
-            className="rounded-2xl object-cover w-64"
+            className="rounded-2xl object-cover w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-full h-auto"
           />
           <div className="flex flex-col gap-6 w-full max-w-md">
             <div className="bg-blue-600 text-white rounded-2xl p-6 flex items-start gap-4 shadow-lg">
@@ -30,8 +30,8 @@ export default function Emagrecimento() {
             </div>
           </div>
         </div>
-        <div className="w-96 md:w-1/2">
-          <h1 className="text-5xl font-bold mb-8 text-[#151c2c]">Emagrecimento</h1>
+        <div className="w-full md:w-1/2 mt-8 md:mt-0">
+          <h1 className="text-3xl md:text-5xl font-bold mb-8 text-[#151c2c]">Emagrecimento</h1>
           <div className="flex flex-col gap-6 text-lg text-[#222]">
             <p>
                 A Ortomolecular é um ramo da ciência com o objetivo de restabelecer o equilíbrio químico do organismo, que se dá por meio do uso de substâncias e elementos naturais, como vitaminas, minerais ou aminoácidos. Estes elementos proporcionam um reequilíbrio bioquímico e combatem os radicais livres.

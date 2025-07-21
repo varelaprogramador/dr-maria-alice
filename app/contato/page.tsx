@@ -55,7 +55,7 @@ const Contact = () => {
     return (
         <div className="min-h-screen mx-auto">
             <section
-                className="flex flex-col px-[6%] py-10 relative"
+                className="flex flex-col px-4 sm:px-8 md:px-[6%] py-6 sm:py-10 relative"
                 style={{
                     backgroundImage: 'url("/default-section-1.svg")',
                     backgroundRepeat: "no-repeat",
@@ -66,104 +66,68 @@ const Contact = () => {
                 <div className="absolute inset-0 bg-[#1a8ca811] pointer-events-none" />
                 <div className="relative z-10">
                     <HeaderCustom />
-                    <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row gap-8 mt-10">
-                        <div className="flex-1">
+                    <div className="bg-white rounded-xl shadow-lg p-4 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-8 mt-6 sm:mt-10">
+                        <div className="flex-1 min-w-0">
                             <h2 className="text-3xl font-bold mb-2">Agende sua consulta</h2>
                             <p className="text-blue-700 text-sm mb-4">
                                 A Clínica Dra. Maria Alice Fernandes de Miranda busca através da Medicina Integrativa oferecer saúde e bem-estar aos pacientes, utilizando recursos eficazes para o diagnóstico e tratamentos.
                             </p>
-                            <Form {...form}>
-                                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        <FormField
-                                            control={form.control}
-                                            name="name"
-                                            render={({ field }) => (
-                                                <FormItem>
-                                                    <FormLabel>Nome *</FormLabel>
-                                                    <FormControl>
-                                                        <Input placeholder="Digite seu nome" {...field} />
-                                                    </FormControl>
-                                                    <FormMessage />
-                                                </FormItem>
-                                            )}
+                            <form className="flex flex-col gap-4" onSubmit={form.handleSubmit(onSubmit)}>
+                                <Input
+                                    type="text"
+                                    placeholder="Nome"
+                                    {...form.register("name")}
+                                />
+                                <Input
+                                    type="email"
+                                    placeholder="E-mail"
+                                    {...form.register("email")}
+                                />
+                                <Input
+                                    type="tel"
+                                    placeholder="Telefone"
+                                    {...form.register("phone")}
+                                />
+                                <Textarea
+                                    placeholder="Mensagem"
+                                    {...form.register("message")}
+                                />
+                                <div className="flex flex-col gap-2 mt-4">
+                                    <label className="flex items-center gap-2">
+                                        <Checkbox
+                                            value="google"
+                                            {...form.register("source")}
                                         />
-                                        <FormField
-                                            control={form.control}
-                                            name="email"
-                                            render={({ field }) => (
-                                                <FormItem>
-                                                    <FormLabel>E-mail</FormLabel>
-                                                    <FormControl>
-                                                        <Input placeholder="Digite seu e-mail" {...field} />
-                                                    </FormControl>
-                                                    <FormMessage />
-                                                </FormItem>
-                                            )}
+                                        Google
+                                    </label>
+                                    <label className="flex items-center gap-2">
+                                        <Checkbox
+                                            value="facebook"
+                                            {...form.register("source")}
                                         />
-                                    </div>
-                                    <FormField
-                                        control={form.control}
-                                        name="phone"
-                                        render={({ field }) => (
-                                            <FormItem>
-                                                <FormLabel>Telefone *</FormLabel>
-                                                <FormControl>
-                                                    <Input placeholder="Digite seu telefone" {...field} />
-                                                </FormControl>
-                                                <FormMessage />
-                                            </FormItem>
-                                        )}
-                                    />
-                                    <FormField
-                                        control={form.control}
-                                        name="message"
-                                        render={({ field }) => (
-                                            <FormItem>
-                                                <FormLabel>Mensagem *</FormLabel>
-                                                <FormControl>
-                                                    <Textarea placeholder="Digite sua mensagem" rows={4} {...field} />
-                                                </FormControl>
-                                                <FormMessage />
-                                            </FormItem>
-                                        )}
-                                    />
-                                    <div>
-                                        <FormLabel>Por onde nos encontrou?</FormLabel>
-                                        <div className="flex flex-wrap gap-4 mt-2">
-                                            {sources.map((src) => (
-                                                <FormField
-                                                    key={src.value}
-                                                    control={form.control}
-                                                    name="source"
-                                                    render={({ field }) => (
-                                                        <FormItem className="flex items-center space-x-2">
-                                                            <FormControl>
-                                                                <Checkbox
-                                                                    checked={field.value?.includes(src.value)}
-                                                                    onCheckedChange={(checked) => {
-                                                                        if (checked) {
-                                                                            field.onChange([...(field.value || []), src.value]);
-                                                                        } else {
-                                                                            field.onChange((field.value || []).filter((v: string) => v !== src.value));
-                                                                        }
-                                                                    }}
-                                                                />
-                                                            </FormControl>
-                                                            <FormLabel className="font-normal cursor-pointer">{src.label}</FormLabel>
-                                                        </FormItem>
-                                                    )}
-                                                />
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <Button type="submit" className="mt-2 w-32" disabled={loading}>
-                                        {loading ? "Enviando..." : "Enviar"}
-                                    </Button>
-                                </form>
-                            </Form>
+                                        Facebook
+                                    </label>
+                                    <label className="flex items-center gap-2">
+                                        <Checkbox
+                                            value="instagram"
+                                            {...form.register("source")}
+                                        />
+                                        Instagram
+                                    </label>
+                                    <label className="flex items-center gap-2">
+                                        <Checkbox
+                                            value="indicacao"
+                                            {...form.register("source")}
+                                        />
+                                        Indicação
+                                    </label>
+                                </div>
+                                <Button type="submit" className="mt-6" disabled={loading}>
+                                    {loading ? "Enviando..." : "Enviar"}
+                                </Button>
+                            </form>
                         </div>
-                        <div className="flex-1 flex flex-col gap-4">
+                        <div className="flex-1 flex flex-col gap-4 min-w-0 mt-8 md:mt-0">
                             <div className="flex flex-col md:flex-row gap-6">
                                 <div>
                                     <div className="flex items-center gap-2 mb-2">
@@ -207,7 +171,7 @@ const Contact = () => {
                                     alt="Foto da clínica"
                                     width={400}
                                     height={120}
-                                    className="rounded-lg object-cover"
+                                    className="rounded-lg object-cover w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-full h-auto"
                                 />
                             </div>
                         </div>

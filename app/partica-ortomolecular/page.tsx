@@ -7,14 +7,14 @@ const ParticaOrtomolecular = () => {
     return (
         <div className="min-h-screen bg-[#f5f9fd]">
             <HeaderCustom />
-            <section className="flex flex-col md:flex-row gap-10 px-4 md:px-[12%] py-12 items-center">
+            <section className="flex flex-col md:flex-row gap-8 md:gap-10 px-4 md:px-[12%] py-8 md:py-12 items-center">
                 <div className="w-full md:w-[45%] flex flex-col items-center">
                     <Image
                         src="/pratica-ortomolecular.jpg"
                         alt="Prática Ortomolecular"
                         width={400}
                         height={400}
-                        className="rounded-xl object-cover w-full max-w-xs md:max-w-md"
+                        className="rounded-xl object-cover w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-full h-auto"
                         priority
                     />
                     <div className="flex flex-col gap-4 mt-8 w-full">
@@ -32,7 +32,7 @@ const ParticaOrtomolecular = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full md:w-[55%] flex flex-col">
+                <div className="w-full md:w-[55%] flex flex-col mt-8 md:mt-0">
                     <h1 className="text-2xl md:text-3xl font-bold text-[#222B45] mb-4">PRÁTICA ORTOMOLECULAR</h1>
                     <p className="text-base text-[#222B45] mb-6 leading-relaxed">
                         A Ortomolecular é um ramo da ciência com o objetivo de restabelecer o equilíbrio original do organismo, que se dá por meio do uso de substâncias e elementos naturais, como vitaminas, minerais ou aminoácidos. Estes elementos proporcionam um equilíbrio bioquímico e combatem os radicais livres.
