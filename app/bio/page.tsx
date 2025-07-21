@@ -147,9 +147,8 @@ const memberships = [
 export default function BiografiaDra() {
   return (
     <div className="min-h-screen mx-auto bg-gradient-to-br from-slate-50 to-blue-50">
-        <HeaderCustom />
       <section
-        className="flex flex-col px-4 md:px-[8%] lg:px-[12%] relative"
+        className="flex flex-col px-4 sm:px-8 md:px-[6%] py-6 sm:py-10 relative"
         style={{
           backgroundImage: 'url("/default-section-1.svg")',
           backgroundRepeat: "no-repeat",
@@ -159,7 +158,7 @@ export default function BiografiaDra() {
       >
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a8ca811] to-[#3b82f611] pointer-events-none" />
         <div className="relative z-10">
-         
+          <HeaderCustom />
 
           {/* Hero Biography Section */}
           <div className="flex flex-col lg:flex-row gap-12 py-12">
