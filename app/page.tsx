@@ -2,6 +2,7 @@ import { HeaderCustom } from "@/components/header-custom";
 import { Button } from "@/components/ui/button";
 import { Armchair, Calendar, Headset, ParkingCircle } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -33,12 +34,15 @@ export default function Home() {
                 Além de associar os diversos modelos terapêuticos (Medicina Alopática, Homeopática, Ortomolecular, Fitoterapia, etc) no processo de diagnóstico, tratamentos, prevenção e promoção da saúde.
               </p>
               <div className="flex flex-col sm:flex-row mt-8 gap-4 w-full ">
-                <Button className="bg-blue-600 hover:bg-blue-700 p-4 sm:p-6 font-light w-full sm:w-auto">
-                  Agendar uma consulta
-                </Button>
-                <Button className="bg-transparent border-blue-600 border text-blue-600 hover:bg-blue-700 hover:text-white p-4 sm:p-6 font-light w-full sm:w-auto">
-                  Saiba mais
-                </Button>
+                <Link href={"/contato"}>
+                  <Button className="bg-blue-600 hover:bg-blue-700 p-4 sm:p-6 font-light w-full sm:w-auto">
+                    Agendar uma consulta
+                  </Button></Link>
+                <Link href={"/bio"}>
+                  <Button className="bg-transparent border-blue-600 border text-blue-600 hover:bg-blue-700 hover:text-white p-4 sm:p-6 font-light w-full sm:w-auto">
+                    Saiba mais
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="w-full flex justify-center lg:w-[60%] items-center">
@@ -58,30 +62,30 @@ export default function Home() {
       >
         <div className="w-full max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-10 py-10 items-start">
-          <div className="w-full flex justify-center mb-8 lg:mb-0">
-            <Image src={"/clinica.jpg"} alt="Foto da clínica" height={840} width={622} className="rounded-xl w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-full h-auto object-cover" />
+            <div className="w-full flex justify-center mb-8 lg:mb-0">
+              <Image src={"/clinica.jpg"} alt="Foto da clínica" height={840} width={622} className="rounded-xl w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-full h-auto object-cover" />
+            </div>
+            <div className="flex flex-col w-full text-black">
+              <ul className="pl-0 mt-4 space-y-4 text-base h-full ">
+                <li className="flex items-center gap-2 border-b border-gray-200 pb-2 transition-colors duration-200 hover:text-blue-400 group cursor-pointer">
+                  <ParkingCircle className="text-black group-hover:text-blue-400 transition-colors duration-200" />
+                  <span className="text-black group-hover:text-blue-400 transition-colors duration-200">Estacionamento no local</span>
+                </li>
+                <li className="flex items-center gap-2 border-b border-gray-200 pb-2 transition-colors duration-200 hover:text-blue-400 group cursor-pointer">
+                  <Calendar className="text-black group-hover:text-blue-400 transition-colors duration-200" />
+                  <span className="text-black group-hover:text-blue-400 transition-colors duration-200">Agendamento prévio</span>
+                </li>
+                <li className="flex items-center gap-2 border-b border-gray-200 pb-2 transition-colors duration-200 hover:text-blue-400 group cursor-pointer">
+                  <Armchair className="text-black group-hover:text-blue-400 transition-colors duration-200" />
+                  <span className="text-black group-hover:text-blue-400 transition-colors duration-200">Ambiente climatizado</span>
+                </li>
+                <li className="flex items-center gap-2 transition-colors duration-200 hover:text-blue-400 group cursor-pointer">
+                  <Headset className="text-black group-hover:text-blue-400 transition-colors duration-200" />
+                  <span className="text-black group-hover:text-blue-400 transition-colors duration-200">Atendimento personalizado</span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="flex flex-col w-full text-black">
-            <ul className="pl-0 mt-4 space-y-4 text-base h-full ">
-              <li className="flex items-center gap-2 border-b border-gray-200 pb-2 transition-colors duration-200 hover:text-blue-400 group cursor-pointer">
-                <ParkingCircle className="text-black group-hover:text-blue-400 transition-colors duration-200" />
-                <span className="text-black group-hover:text-blue-400 transition-colors duration-200">Estacionamento no local</span>
-              </li>
-              <li className="flex items-center gap-2 border-b border-gray-200 pb-2 transition-colors duration-200 hover:text-blue-400 group cursor-pointer">
-                <Calendar className="text-black group-hover:text-blue-400 transition-colors duration-200" />
-                <span className="text-black group-hover:text-blue-400 transition-colors duration-200">Agendamento prévio</span>
-              </li>
-              <li className="flex items-center gap-2 border-b border-gray-200 pb-2 transition-colors duration-200 hover:text-blue-400 group cursor-pointer">
-                <Armchair className="text-black group-hover:text-blue-400 transition-colors duration-200" />
-                <span className="text-black group-hover:text-blue-400 transition-colors duration-200">Ambiente climatizado</span>
-              </li>
-              <li className="flex items-center gap-2 transition-colors duration-200 hover:text-blue-400 group cursor-pointer">
-                <Headset className="text-black group-hover:text-blue-400 transition-colors duration-200" />
-                <span className="text-black group-hover:text-blue-400 transition-colors duration-200">Atendimento personalizado</span>
-              </li>
-            </ul>
-          </div>
-        </div>
         </div>
         <div className="flex flex-col items-center py-10 sm:py-16 w-full max-w-7xl mx-auto">
           <span className="text-[#222B45] text-2xl sm:text-3xl font-bold mb-1 text-center">
