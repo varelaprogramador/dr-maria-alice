@@ -213,7 +213,7 @@ export const HeaderCustom = () => {
               </DrawerTrigger>
               <DrawerTitle className="sr-only">Menu de Navegação</DrawerTitle>
               <DrawerContent className="bg-white/95 backdrop-blur-xl">
-                <div className="mx-auto w-full max-w-sm">
+                <div className="mx-auto w-full max-w-sm max-h-screen overflow-y-auto">
                   <div className="p-6 space-y-4">
                     {/* Mobile Logo */}
                     <div className="flex justify-center pb-4 border-b border-blue-100">
