@@ -34,7 +34,7 @@ export default function Home() {
                 Além de associar os diversos modelos terapêuticos (Medicina Alopática, Homeopática, Ortomolecular, Fitoterapia, etc) no processo de diagnóstico, tratamentos, prevenção e promoção da saúde.
               </p>
               <div className="flex flex-col sm:flex-row mt-8 gap-4 w-full ">
-                <Link href={"/contato"}>
+                <Link href={"https://wa.me/5511993049032"}>
                   <Button className="bg-blue-600 hover:bg-blue-700 p-4 sm:p-6 font-light w-full sm:w-auto">
                     Agendar uma consulta
                   </Button></Link>
@@ -127,7 +127,7 @@ export default function Home() {
               <Image
                 width={300}
                 height={300}
-                src="/ortomolecular.png"
+                src="/modulacao.png"
                 alt="Modulação Hormonal"
                 className="w-full h-44 object-cover rounded-xl mb-6"
               />
@@ -149,7 +149,7 @@ export default function Home() {
             Agende sua consulta e tenha acesso a um atendimento de qualidade, personalizado e dedicado ao seu bem estar. Não perca tempo, reserve seu horário agora mesmo e invista na sua qualidade de vida!
           </p>
           <a
-            href="https://wa.me/SEU_NUMERO_WHATSAPP"
+            href="https://wa.me/5511993049032"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center bg-[#1877F2] hover:bg-[#145db2] text-white font-semibold text-xs md:text-sm px-6 sm:px-8 py-3 rounded-lg transition-colors duration-200 w-full max-w-xs sm:max-w-fit"

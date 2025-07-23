@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { Button, MessageCircle } from "@/components/ui/button";
 import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover"
 import { Drawer, DrawerTrigger, DrawerContent, DrawerTitle } from "@/components/ui/drawer"
 import { Menu, ChevronDown, Calendar, Phone } from "lucide-react"
@@ -25,6 +25,35 @@ const examesItems = [
   { href: "/histamina", label: "Histamina – Estudo da Metilação" },
   { href: "/alzheimer", label: "Alzheimer" },
 ]
+
+const whatsappNumber = "5511993049032";
+const whatsappLink = `https://wa.me/${whatsappNumber}`;
+
+export const WhatsAppPopupButton = () => (
+  <a
+    href={whatsappLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      position: "fixed",
+      bottom: 24,
+      right: 24,
+      zIndex: 50,
+      borderRadius: 9999,
+      boxShadow: "0 4px 24px 0 rgba(44,51,73,0.14)",
+      background: "#25D366",
+      padding: 0,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      width: 64,
+      height: 64,
+    }}
+    aria-label="Atendimento via WhatsApp"
+  >
+    <MessageCircle size={36} color="#fff" />
+  </a>
+);
 
 export const HeaderCustom = () => {
   const router = useRouter()
@@ -57,18 +86,16 @@ export const HeaderCustom = () => {
           <nav className="hidden lg:flex items-center space-x-1">
             <Link
               href="/"
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 ${
-                isActive("/") ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700 hover:text-blue-700"
-              }`}
+              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 ${isActive("/") ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700 hover:text-blue-700"
+                }`}
             >
               INÍCIO
             </Link>
 
             <Link
               href="/bio"
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 ${
-                isActive("/bio") ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700 hover:text-blue-700"
-              }`}
+              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 ${isActive("/bio") ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700 hover:text-blue-700"
+                }`}
             >
               BIOGRAFIA
             </Link>
@@ -83,16 +110,14 @@ export const HeaderCustom = () => {
                 <PopoverTrigger asChild>
                   <Button
                     variant="ghost"
-                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 ${
-                      isInSection(tratamentosItems) ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700"
-                    }`}
+                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 ${isInSection(tratamentosItems) ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700"
+                      }`}
                     onClick={() => router.push("/tratamentos")}
                   >
                     TRATAMENTOS
                     <ChevronDown
-                      className={`ml-1 h-4 w-4 transition-transform duration-300 ${
-                        openTratamentos ? "rotate-180" : ""
-                      }`}
+                      className={`ml-1 h-4 w-4 transition-transform duration-300 ${openTratamentos ? "rotate-180" : ""
+                        }`}
                     />
                   </Button>
                 </PopoverTrigger>
@@ -106,9 +131,8 @@ export const HeaderCustom = () => {
                       <Button
                         key={item.href}
                         variant="ghost"
-                        className={`w-full justify-start text-left h-auto p-3 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 hover:translate-x-1 ${
-                          isActive(item.href) ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700"
-                        }`}
+                        className={`w-full justify-start text-left h-auto p-3 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 hover:translate-x-1 ${isActive(item.href) ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700"
+                          }`}
                         onClick={() => {
                           router.push(item.href)
                           setOpenTratamentos(false)
@@ -132,9 +156,8 @@ export const HeaderCustom = () => {
                 <PopoverTrigger asChild>
                   <Button
                     variant="ghost"
-                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 ${
-                      isInSection(examesItems) ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700"
-                    }`}
+                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 ${isInSection(examesItems) ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700"
+                      }`}
                   >
                     EXAMES ESPECIAIS
                     <ChevronDown
@@ -152,9 +175,8 @@ export const HeaderCustom = () => {
                       <Button
                         key={item.href}
                         variant="ghost"
-                        className={`w-full justify-start text-left h-auto p-3 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 hover:translate-x-1 ${
-                          isActive(item.href) ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700"
-                        }`}
+                        className={`w-full justify-start text-left h-auto p-3 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 hover:translate-x-1 ${isActive(item.href) ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700"
+                          }`}
                         onClick={() => {
                           router.push(item.href)
                           setOpenExames(false)
@@ -170,9 +192,8 @@ export const HeaderCustom = () => {
 
             <Link
               href="/contato"
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 ${
-                isActive("/contato") ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700 hover:text-blue-700"
-              }`}
+              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 ${isActive("/contato") ? "text-blue-700 bg-blue-50 shadow-sm" : "text-gray-700 hover:text-blue-700"
+                }`}
             >
               CONTATO
             </Link>
@@ -180,7 +201,7 @@ export const HeaderCustom = () => {
 
           {/* CTA Button Desktop */}
           <div className="hidden lg:flex items-center space-x-3">
-            <Link href="tel:+5521999999999">
+            <Link href="tel:+5511993049032">
               <Button
                 variant="outline"
                 size="sm"
@@ -190,7 +211,7 @@ export const HeaderCustom = () => {
                 Ligar
               </Button>
             </Link>
-            <Link href="/contato">
+            <Link href="https://wa.me/5511993049032">
               <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <Calendar className="w-4 h-4 mr-2" />
                 Agendar Consulta
@@ -224,22 +245,20 @@ export const HeaderCustom = () => {
                     <div className="space-y-2">
                       <Link
                         href="/"
-                        className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
-                          isActive("/")
-                            ? "text-blue-700 bg-blue-50"
-                            : "text-gray-700 hover:bg-blue-50 hover:text-blue-700"
-                        }`}
+                        className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${isActive("/")
+                          ? "text-blue-700 bg-blue-50"
+                          : "text-gray-700 hover:bg-blue-50 hover:text-blue-700"
+                          }`}
                       >
                         INÍCIO
                       </Link>
 
                       <Link
                         href="/bio"
-                        className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
-                          isActive("/bio")
-                            ? "text-blue-700 bg-blue-50"
-                            : "text-gray-700 hover:bg-blue-50 hover:text-blue-700"
-                        }`}
+                        className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${isActive("/bio")
+                          ? "text-blue-700 bg-blue-50"
+                          : "text-gray-700 hover:bg-blue-50 hover:text-blue-700"
+                          }`}
                       >
                         BIOGRAFIA
                       </Link>
@@ -254,11 +273,10 @@ export const HeaderCustom = () => {
                             <Button
                               key={item.href}
                               variant="ghost"
-                              className={`w-full justify-start text-left h-auto p-3 rounded-lg transition-all duration-300 ${
-                                isActive(item.href)
-                                  ? "text-blue-700 bg-blue-50"
-                                  : "text-gray-600 hover:bg-blue-50 hover:text-blue-700"
-                              }`}
+                              className={`w-full justify-start text-left h-auto p-3 rounded-lg transition-all duration-300 ${isActive(item.href)
+                                ? "text-blue-700 bg-blue-50"
+                                : "text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+                                }`}
                               onClick={() => router.push(item.href)}
                             >
                               {item.label}
@@ -277,11 +295,10 @@ export const HeaderCustom = () => {
                             <Button
                               key={item.href}
                               variant="ghost"
-                              className={`w-full justify-start text-left h-auto p-3 rounded-lg transition-all duration-300 ${
-                                isActive(item.href)
-                                  ? "text-blue-700 bg-blue-50"
-                                  : "text-gray-600 hover:bg-blue-50 hover:text-blue-700"
-                              }`}
+                              className={`w-full justify-start text-left h-auto p-3 rounded-lg transition-all duration-300 ${isActive(item.href)
+                                ? "text-blue-700 bg-blue-50"
+                                : "text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+                                }`}
                               onClick={() => router.push(item.href)}
                             >
                               {item.label}
@@ -292,11 +309,10 @@ export const HeaderCustom = () => {
 
                       <Link
                         href="/contato"
-                        className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
-                          isActive("/contato")
-                            ? "text-blue-700 bg-blue-50"
-                            : "text-gray-700 hover:bg-blue-50 hover:text-blue-700"
-                        }`}
+                        className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${isActive("/contato")
+                          ? "text-blue-700 bg-blue-50"
+                          : "text-gray-700 hover:bg-blue-50 hover:text-blue-700"
+                          }`}
                       >
                         CONTATO
                       </Link>
@@ -304,7 +320,7 @@ export const HeaderCustom = () => {
 
                     {/* Mobile CTA Buttons */}
                     <div className="pt-4 border-t border-blue-100 space-y-3">
-                      <Link href="tel:+5521999999999" className="block">
+                      <Link href="tel:+5511993049032" className="block">
                         <Button
                           variant="outline"
                           className="w-full border-blue-200 text-blue-700 hover:bg-blue-50 bg-transparent"
@@ -313,7 +329,7 @@ export const HeaderCustom = () => {
                           Ligar Agora
                         </Button>
                       </Link>
-                      <Link href="/contato" className="block">
+                      <Link href="https://wa.me/5511993049032" className="block">
                         <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg">
                           <Calendar className="w-4 h-4 mr-2" />
                           Agendar Consulta
