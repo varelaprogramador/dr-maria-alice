@@ -1,4 +1,20 @@
+import type { Metadata } from "next"
 import { HeaderCustom } from "@/components/header-custom"
+
+export const metadata: Metadata = {
+  title: "Biografia | Dra. Maria Alice – Médica Integrativa em São Paulo",
+  description:
+    "Conheça a trajetória da Dra. Maria Alice Fernandes de Miranda: mais de 40 anos de medicina, especialista em Nefrologia, Medicina Integrativa, Ortomolecular e Medicina Funcional. Clínica em Santana, SP.",
+  alternates: {
+    canonical: "/bio",
+  },
+  openGraph: {
+    title: "Biografia | Dra. Maria Alice – Médica Integrativa em São Paulo",
+    description:
+      "Mais de 40 anos de experiência em medicina. Especialista em Medicina Integrativa, Ortomolecular e Modulação Hormonal. Clínica em Santana, Zona Norte de SP.",
+    images: [{ url: "/dra.jpg", alt: "Dra. Maria Alice Fernandes de Miranda" }],
+  },
+}
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"

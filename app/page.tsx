@@ -21,8 +21,8 @@ export default function Home() {
           <HeaderCustom />
           <div className="flex flex-col lg:flex-row gap-10 py-10">
             <div className="flex flex-col w-full  text-gray-700">
-              <h2 className="text-blue-300 font-semibold text-lg sm:text-xl">CONHEÇA A CLÍNICA DA</h2>
-              <h2 className="font-semibold text-xl sm:text-2xl">DRA. MARIA ALICE</h2>
+              <p className="text-blue-300 font-semibold text-lg sm:text-xl">CONHEÇA A CLÍNICA DA</p>
+              <h1 className="font-semibold text-xl sm:text-2xl">DRA. MARIA ALICE</h1>
               <br />
               <p className="text-sm sm:text-base">
                 Localizada no coração de Santana, um dos bairros mais tradicionais da Zona Norte de São Paulo, a Clínica Dra. Maria Alice Fernandes de Miranda é conhecida pelo atendimento humanizado e atenção com os seus pacientes.
@@ -46,7 +46,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full flex justify-center lg:w-[60%] items-center">
-              <Image src={"/dra.jpg"} alt="dra" height={400} width={302} className="rounded-xl w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-full h-auto object-cover" />
+              <Image src={"/dra.jpg"} alt="Dra. Maria Alice Fernandes de Miranda – Médica Especialista em Medicina Integrativa em Santana, São Paulo" height={400} width={302} className="rounded-xl w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-full h-auto object-cover" />
             </div>
           </div>
         </div>

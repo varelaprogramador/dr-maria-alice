@@ -1,4 +1,20 @@
+import type { Metadata } from "next";
 import { HeaderCustom } from "@/components/header-custom";
+
+export const metadata: Metadata = {
+  title: "Tratamentos | Medicina Funcional Integrativa – Dra. Maria Alice SP",
+  description:
+    "Tratamentos de Medicina Integrativa em Santana, São Paulo: Prática Ortomolecular, Emagrecimento, Modulação Hormonal, Envelhecimento Saudável, Distúrbios do Sono, Estresse e muito mais.",
+  alternates: {
+    canonical: "/tratamentos",
+  },
+  openGraph: {
+    title: "Tratamentos | Medicina Funcional Integrativa – Dra. Maria Alice SP",
+    description:
+      "Conheça os tratamentos especializados da Clínica Dra. Maria Alice: Ortomolecular, Modulação Hormonal, Emagrecimento, Longevidade e Medicina Funcional em São Paulo.",
+    images: [{ url: "/pratica-ortomolecular.jpg", alt: "Tratamentos Medicina Integrativa – Dra. Maria Alice" }],
+  },
+};
 import Tratamento from "@/components/tratamento/page";
 
 export default function Tratamentos() {
